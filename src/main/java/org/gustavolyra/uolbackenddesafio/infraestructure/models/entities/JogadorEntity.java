@@ -1,4 +1,4 @@
-package org.gustavolyra.uolbackenddesafio.infraestructure.entities;
+package org.gustavolyra.uolbackenddesafio.infraestructure.models.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -5,8 +5,8 @@ public enum Grupo {
     VINGADORES("Vingadores", "https://raw.githubusercontent.com/uolhost/test-backEnd-Java/master/referencias/vingadores.json"),
     LIGA_DA_JUSTICA("Liga da Justiça", "https://raw.githubusercontent.com/uolhost/test-backEnd-Java/master/referencias/liga_da_justica.xml");
 
-    private String nome;
-    private String url;
+    private final String nome;
+    private final String url;
 
     public String getNome() {
         return nome;

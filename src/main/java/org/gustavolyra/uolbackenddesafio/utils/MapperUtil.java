@@ -27,7 +27,7 @@ public class MapperUtil {
             }
             return target;
         } catch (Exception e) {
-            throw new MapperException("Error mapping object");
+            throw new MapperException("ErrorDTO mapping object");
         }
     }
 
