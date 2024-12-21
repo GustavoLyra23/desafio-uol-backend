@@ -1,7 +1,8 @@
 package org.gustavolyra.uolbackenddesafio.infraestructure.gateways;
 
-import org.gustavolyra.uolbackenddesafio.domain.models.Jogador;
+import org.gustavolyra.uolbackenddesafio.domain.enums.Grupo;
 import org.gustavolyra.uolbackenddesafio.domain.gateways.db.JogadorRepository;
+import org.gustavolyra.uolbackenddesafio.domain.models.Jogador;
 import org.gustavolyra.uolbackenddesafio.infraestructure.models.entities.JogadorEntity;
 import org.gustavolyra.uolbackenddesafio.utils.MapperUtil;
 import org.springframework.data.domain.PageRequest;
@@ -29,4 +30,11 @@ public class UserRepositoryImpl implements JogadorRepository {
         return jogadorDataRepository.findAll(pageRequest).map(jogadorEntity ->
                 MapperUtil.map(jogadorEntity, Jogador.class)).toList();
     }
+
+    @Override
+    public List<String> findUsedCodinomes(Grupo group) {
+        return jogadorDataRepository.findUsedCodinomes(group);
+    }
+
+
 }

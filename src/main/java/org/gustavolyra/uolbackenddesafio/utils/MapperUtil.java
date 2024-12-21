@@ -10,6 +10,7 @@ public class MapperUtil {
         throw new IllegalStateException("Utility class");
     }
 
+    //only works for objects with the same fields(types and names)...
     public static <T> T map(Object source, Class<T> targetClass) {
         try {
             T target = targetClass.getDeclaredConstructor().newInstance();
